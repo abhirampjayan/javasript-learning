@@ -7,6 +7,26 @@
     <title>Data Types | Number</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      function loadScript(src, callback) {
+        let script = document.createElement("script");
+        script.src = src;
+        script.onload = () => callback(null, script);
+        script.onerror = () =>
+          callback(new Error(`script load error for ${src}`));
+
+        document.head.append(script);
+      }
+
+      loadScript("test.js", (error, script) => {
+        if (error) {
+          alert(error);
+        } else {
+          alert(`Cool, the script ${script.src} is loaded`);
+          // alert(_);
+        }
+      });
+    </script>
   </head>
   <body>
     <div
@@ -37,8 +57,8 @@
           d="M65.66 19.1L80.94 0 73.7 17.2l8.05 1.9L65.3 39l9.3-18.02-8.95-1.88z"
         ></path>
       </svg>
-      <h1 class="text-white text-xl font-medium">Store read dates</h1>
+      <h1 class="text-white text-3xl font-medium" id="time">Yet to start</h1>
     </div>
-    <script src="script.js"></script>
+    <!-- <script src="test.js"></script> -->
   </body>
 </html>

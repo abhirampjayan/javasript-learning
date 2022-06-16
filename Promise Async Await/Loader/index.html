@@ -5,8 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Data Types | Number</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../../style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .message-ball {
+        font-size: 20px;
+        line-height: 200px;
+        text-align: center;
+      }
+      .circle {
+        transition-property: width, height;
+        transition-duration: 2s;
+        position: fixed;
+        transform: translateX(-50%) translateY(-50%);
+        background-color: red;
+        border-radius: 50%;
+      }
+    </style>
   </head>
   <body>
     <div
@@ -35,10 +50,11 @@
           fill="#F36D40"
           class="rotate"
           d="M65.66 19.1L80.94 0 73.7 17.2l8.05 1.9L65.3 39l9.3-18.02-8.95-1.88z"
-        ></path>
-      </svg>
-      <h1 class="text-white text-xl font-medium">Store read dates</h1>
+        ></path></svg
+      ><button onclick="go()">Click me</button>
+
+      <h1 class="text-white text-xl font-medium"></h1>
     </div>
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
   </body>
 </html>

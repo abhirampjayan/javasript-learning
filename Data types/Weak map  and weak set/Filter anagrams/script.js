@@ -1,14 +1,9 @@
-function aclean(arr) {
-  let map = new Map();
-
-  for (let word of arr) {
-    let sorted = word.toLowerCase().split("").sort().join("");
-    map.set(sorted, word);
-  }
-
-  return Array.from(map.values());
+let readMap = new WeakMap();
+let messages = [
+  { text: "Hello", from: "John" },
+  { text: "How goes?", from: "John" },
+  { text: "See you soon", from: "Alice" },
+];
+for (const iterator of messages) {
+  readMap.set(iterator, new Date(2017, 1, 1));
 }
-
-let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
-
-alert(aclean(arr));
