@@ -1,0 +1,33 @@
+.rotate {
+  animation-name: rotate;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+    filter: drop-shadow(0px 0px 0px #F36D40);
+  }
+  50% {
+    transform:  rotate(0deg) scale(1.1);
+    filter: drop-shadow(0px 0px 2px #F36D40);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    filter: drop-shadow(0px 0px 0px #F36D40);
+  }
+}
+@-moz-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
